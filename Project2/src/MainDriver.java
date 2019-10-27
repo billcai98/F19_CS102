@@ -8,21 +8,46 @@ public class MainDriver {
 
     public static void main(String[] args) throws CloneNotSupportedException {
 
-        int[][] boardList = {{2, 2, 2, 1},
+        int[][] boardList = {{0, 0, 0, 0},
                              {1, 1, 0, 1},
-                             {2, 2, 1, 2},
-                             {1, 2, 2, 1}};
+                             {0, 2, 1, 2},
+                             {1, 0, 2, 1}};
 
         Board myBoard = new Board(boardList);
+        myBoard.move(1, 1);
+        myBoard.move(3, 2);
+        myBoard.move(0, 1);
+        myBoard.printBoard();
 
         System.out.println(checkBoard(myBoard, 1));
     }
 
-    public static void play(Board boart, int clr) {
-    }
 
     /**
-     * Method 1     :  CHECK BOARD
+     * Method 1     :  PLAY
+     * Description  :
+     */
+    public static void play(Board board, int player) throws CloneNotSupportedException {
+
+        // Base Case
+
+
+        // Recursive Body
+        for (int curCol = 0; curCol < NUM_COLUMNS; curCol++) {                  // Loop over columns (next move)
+
+            if (! board.isFull(curCol) ) {                                            // Check if the column is full
+                Board newBoard = (Board) board.clone();     // Clone the board
+                newBoard.move(curCol, player);              // Make a move at this column
+//                Play(newBoard, 3-player);
+            }
+
+        }
+
+    }
+
+
+    /**
+     * Method 2     :  CHECK BOARD
      * Description  :  Return 0 if the board is full, 1 if R wins, 2 if B wins, 3 if game continues
      */
     public static int checkBoard(Board board, int last_plr) {
