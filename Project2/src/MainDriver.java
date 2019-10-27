@@ -1,3 +1,12 @@
+/*
+
+    Haoyang Cai
+    N18718711; hc2283@nyu.edu
+    Oct 27 2019
+    CS-UA-102 Assignment 2: Connect 4
+
+ */
+
 public class MainDriver {
 
     private static final int NUM_COLUMNS = 4;
@@ -33,7 +42,6 @@ public class MainDriver {
 
     }
 
-
     /**
      * Method 1     :  PLAY
      * Description  :
@@ -59,7 +67,6 @@ public class MainDriver {
             }
         }
     }
-
 
     /**
      * Method 2     :  CHECK BOARD
