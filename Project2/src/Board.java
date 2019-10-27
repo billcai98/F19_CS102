@@ -55,7 +55,7 @@ public class Board implements Cloneable {
         return cloneBoard;
     }
 
-    public void updateBoard(int rowP, int colP, int val) {
+    public void update(int rowP, int colP, int val) {
         boardList[rowP][colP] = val;
     }
 
