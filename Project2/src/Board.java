@@ -1,9 +1,9 @@
 
 public class Board implements Cloneable {
 
-    int[][] boardList;
-    int row_num;
-    int col_num;
+    private int[][] boardList;
+    private int row_num;
+    private int col_num;
 
     // Board Constructor
     Board(int[][] boardList) {
