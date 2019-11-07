@@ -91,8 +91,18 @@ public class MyAVLTreeMap<K,V> extends TreeMap<K,V> {
   }
   
   public void printTree() {
-	  // Put your code to print AVL tree here
+      // Put your code to print AVL tree here
 	  System.out.println("Print of tree");
+
+	  // Get Root of the tree
+    Position<Entry<K,V>> parent = root();
+    System.out.println(parent.getElement());
+    System.out.println(height(parent));
+
+  }
+
+  public void printSubtree() {
+
   }
    
 }
