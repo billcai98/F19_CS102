@@ -91,18 +91,65 @@ public class MyAVLTreeMap<K,V> extends TreeMap<K,V> {
   }
   
   public void printTree() {
-      // Put your code to print AVL tree here
-	  System.out.println("Print of tree");
+    // Put your code to print AVL tree here
+    System.out.println("Print of Tree");
 
-	  // Get Root of the tree
-    Position<Entry<K,V>> parent = root();
-    System.out.println(parent.getElement());
-    System.out.println(height(parent));
+    // Parameters of the tree
+    int height_tree = height(root());
+    int beginCol = 50;
+    int beginLevel = 2 * height_tree;
+
+    // Create List of Nodes
+    String[][] treeList = new String[100][100];
+
+    // Put tree into the array
+    printNodesInternal(root(), beginLevel, beginCol, treeList);
+
+    // Print the array
+    for (int level = height_tree*2; level>=0; level--) {
+      for (int columns = 0; columns < treeList[0].length; columns++) {
+        if (treeList[level][columns] != null) {
+          System.out.print(treeList[level][columns]);
+        } else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
 
   }
 
-  public void printSubtree() {
+  public void printNodesInternal(Position<Entry<K,V>> current, int level, int col, String[][] treeList) {
 
+    // If the node is null, return
+    if (current.getElement() == null) {
+      return;
+    }
+
+    // First, we put the current element in its position
+    treeList[level][col] = (String) current.getElement().getKey();
+
+    // Then we put arrows into the corresponding positions, and print children
+    int space = calculateSpace(level / 2);
+
+    if (left(current).getElement() != null) {
+      treeList[level - 1][col - (space / 2)] = "/";
+      printNodesInternal(left(current), level - 2, col - space, treeList);
+    }
+
+    if (right(current).getElement() != null) {
+      treeList[level - 1][col + (space / 2)] = "\\";
+      printNodesInternal(right(current), level - 2, col + space, treeList);
+    }
+
+    return;
   }
+
+  public int calculateSpace(int level) {
+     if (level == 1) {return 2;}
+     if (level == 2) {return 3;}
+    return 6 * (int) Math.pow(2, level-3);
+  }
+
    
 }

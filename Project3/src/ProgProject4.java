@@ -8,7 +8,7 @@ public class ProgProject4 {
 		String[] inputs = {
 				"CBDAE",
 				"DACBEFMLGHJK",
-				"JABCDEFISN" 
+				"JABCDEFISN",
 		};
 
 		for (int k=0; k<inputs.length;k++) {
