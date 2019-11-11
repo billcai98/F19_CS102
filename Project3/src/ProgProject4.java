@@ -9,6 +9,8 @@ public class ProgProject4 {
 				"CBDAE",
 				"DACBEFMLGHJK",
 				"JABCDEFISN",
+				"WEIORPLKMNABXVQ",
+				"QWERTYUIOHJKLZXCVBASD"
 		};
 
 		for (int k=0; k<inputs.length;k++) {
