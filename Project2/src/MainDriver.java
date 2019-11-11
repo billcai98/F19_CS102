@@ -1,3 +1,12 @@
+/*
+
+    Haoyang Cai
+    N18718711; hc2283@nyu.edu
+    Oct 27 2019
+    CS-UA-102 Assignment 2: Connect 4
+
+ */
+
 public class MainDriver {
 
     private static final int NUM_COLUMNS = 4;
@@ -33,7 +42,6 @@ public class MainDriver {
 
     }
 
-
     /**
      * Method 1     :  PLAY
      * Description  :
@@ -52,16 +60,13 @@ public class MainDriver {
 
         // Recursive Body
         for (int curCol = 0; curCol < NUM_COLUMNS; curCol++) {                  // Loop over columns (next move)
-
             if (! board.isFull(curCol) ) {                              // Check if the column is full
                 Board newBoard = (Board) board.clone();         // Clone the board
                 newBoard.move(curCol, player);                  // Make a move in this column
-                play(newBoard, 3-player);               // Send in the next player. Player next game
+                play(newBoard, 3-player);                       // Send in the next player. Player next game
             }
-
         }
     }
-
 
     /**
      * Method 2     :  CHECK BOARD
