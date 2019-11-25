@@ -32,7 +32,8 @@ public class LewisStructure<E> {
 
     } //----------- end of nested Node class -----------
 
-    public Node<E> root;
+
+    private Node<E> root;
     private Node<E> cursor;
 
     // public methods
@@ -41,26 +42,56 @@ public class LewisStructure<E> {
         this.cursor = this.root;
     }
 
+    public E getRoot() { return root.getElement(); }
+    public E getCursor() { return cursor.getElement(); }
+
+
     public void Add(E element, String d) {
+        String direction = d.toUpperCase();
+        switch (direction) {
+            case "NORTH":
+                cursor.setNorth(new Node<E>(element, null, null, cursor, null));
+                cursor = cursor.north;
+                break;
+            case "EAST":
+                cursor.setEast(new Node<E>(element, null, null, null, cursor));
+                cursor = cursor.east;
+                break;
+            case "SOUTH":
+                cursor.setSouth(new Node<E>(element, cursor, null, null, null));
+                cursor = cursor.south;
+                break;
+            case "WEST":
+                cursor.setWest(new Node<E>(element, null, cursor, null, null));
+                cursor = cursor.west;
+                break;
+        }
+    }
+
+    public void Move(String d) {
         String direction = d.toUpperCase();
 
         switch (direction) {
-            case "NORTH":
-                break;
-            case "EAST":
-                break;
-            case "SOUTH":
-                break;
-            case "WEST":
-                break;
+            case "NORTH": cursor = cursor.north; break;
+            case "EAST": cursor = cursor.east; break;
+            case "SOUTH": cursor = cursor.south; break;
+            case "WEST": cursor = cursor.west; break;
         }
-
-        System.out.println("WRONG DIRECTION!");
     }
 
-    public void Move(String direction) {}
+    public void Print() { recursivePrint(root, "none"); }
 
-    public void Print() {}
+    private void recursivePrint(Node<E> center, String lastDirection) {
+        if (center == null) { return; }
 
+        lastDirection = lastDirection.toUpperCase();
+
+        if (!lastDirection.equals("NORTH")) { recursivePrint(center.north, "South"); }
+        if (!lastDirection.equals("EAST")) { recursivePrint(center.east, "West"); }
+        if (!lastDirection.equals("SOUTH")) { recursivePrint(center.south, "North"); }
+        if (!lastDirection.equals("WEST")) { recursivePrint(center.west, "East"); }
+
+        System.out.print(center.getElement()+" ");
+    }
 
 }
