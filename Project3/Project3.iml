@@ -10,14 +10,13 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://D:/CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://D:/CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="sourcecode1" level="project" />
   </component>
 </module>
