@@ -32,7 +32,7 @@ public class LewisStructure<E> {
 
     } //----------- end of nested Node class -----------
 
-
+    private int size = 0;
     private Node<E> root;
     private Node<E> cursor;
 
@@ -66,6 +66,7 @@ public class LewisStructure<E> {
                 cursor = cursor.west;
                 break;
         }
+        size++;
     }
 
     public void Move(String d) {
