@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sourcecode1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/sourcecode.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/sourcecode.jar!/" />
+    </SOURCES>
+  </library>
+</component>
