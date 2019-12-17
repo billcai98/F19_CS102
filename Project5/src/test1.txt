@@ -1,0 +1,7 @@
+Hello!!@@@# This is a test file. It's eerr! -aaa__a j__j
+Lalal
+a--a
+so--long
+a _beginning_underscore
+ --
+ ’quotedstring’
