@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component inherit-compiler-output="true" inheritJdk="true">
-	<output-test url="file://$MODULE_DIR$/out/test/CS102_Hw1"/>
-	<exclude-output/>
-	<contentEntry url="file://$MODULE_DIR$"/>
-	<lib name="sourcecode.jar" scope="COMPILE">
-		<srcroot url="jar://$MODULE_DIR$/../../../CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar!/"/>
-	</lib>
-</component>
