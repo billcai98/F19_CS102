@@ -1,2 +1,2 @@
 # F19_CS102
-CS_UA_102 Data Structure
+This is the assignment codes for CS_UA_102 Data Structure (2019).
