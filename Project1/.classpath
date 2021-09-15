@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/Users/billcai/Documents/CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar" sourcepath="/Users/billcai/Documents/CaiDoc_Mac_2017/NYU/Junior/Fall2019/F19_DataStruc/sourcecode.jar"/>
-	<classpathentry kind="output" path="out/production/CS102_Hw1"/>
-</classpath>
